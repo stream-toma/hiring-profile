@@ -60,99 +60,147 @@
             The Team
         </h2>
 
-        <div class="overflow-x-auto rounded-lg border border-dark-border">
-            <table class="w-full">
-                <thead>
-                    <tr class="bg-dark-tertiary text-left text-sm uppercase tracking-wide">
-                        <th class="px-4 py-3 font-semibold">Person</th>
-                        <th class="px-4 py-3 font-semibold">Type</th>
-                        <th class="px-4 py-3 font-semibold">E/I</th>
-                        <th class="px-4 py-3 font-semibold">N/S</th>
-                        <th class="px-4 py-3 font-semibold">T/F</th>
-                        <th class="px-4 py-3 font-semibold">J/P</th>
-                        <th class="px-4 py-3 font-semibold">A/T</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-dark-secondary text-gray-400">
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3 font-medium text-gray-200">Toma</td>
-                        <td class="px-4 py-3">ENTJ-A</td>
-                        <td class="px-4 py-3">67%E</td>
-                        <td class="px-4 py-3">56%N</td>
-                        <td class="px-4 py-3 text-blue-400 font-semibold">92%T</td>
-                        <td class="px-4 py-3 text-blue-400 font-semibold">97%J</td>
-                        <td class="px-4 py-3">69%A</td>
-                    </tr>
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3 font-medium text-gray-200">Brandon</td>
-                        <td class="px-4 py-3">ENTJ-A</td>
-                        <td class="px-4 py-3">61%E</td>
-                        <td class="px-4 py-3">56%N</td>
-                        <td class="px-4 py-3">78%T</td>
-                        <td class="px-4 py-3">61%J</td>
-                        <td class="px-4 py-3">61%A</td>
-                    </tr>
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3 font-medium text-gray-200">Jordyn</td>
-                        <td class="px-4 py-3">ENTJ-T</td>
-                        <td class="px-4 py-3">79%E</td>
-                        <td class="px-4 py-3">70%N</td>
-                        <td class="px-4 py-3">61%T</td>
-                        <td class="px-4 py-3">75%J</td>
-                        <td class="px-4 py-3">63%T</td>
-                    </tr>
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3 font-medium text-gray-200">John</td>
-                        <td class="px-4 py-3">INTP-T</td>
-                        <td class="px-4 py-3">55%I</td>
-                        <td class="px-4 py-3">68%N</td>
-                        <td class="px-4 py-3">74%T</td>
-                        <td class="px-4 py-3">69%P</td>
-                        <td class="px-4 py-3">51%T</td>
-                    </tr>
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3 font-medium text-gray-200">Catherine</td>
-                        <td class="px-4 py-3">INFJ-T</td>
-                        <td class="px-4 py-3">80%I</td>
-                        <td class="px-4 py-3 text-blue-400 font-semibold">81%N</td>
-                        <td class="px-4 py-3">55%F</td>
-                        <td class="px-4 py-3">76%J</td>
-                        <td class="px-4 py-3">76%T</td>
-                    </tr>
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3 font-medium text-gray-200">Leor</td>
-                        <td class="px-4 py-3">ENFJ-A</td>
-                        <td class="px-4 py-3">57%E</td>
-                        <td class="px-4 py-3">68%N</td>
-                        <td class="px-4 py-3">52%F</td>
-                        <td class="px-4 py-3">57%J</td>
-                        <td class="px-4 py-3 text-blue-400 font-semibold">79%A</td>
-                    </tr>
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3 font-medium text-gray-200">Kayla</td>
-                        <td class="px-4 py-3">ENFP-A</td>
-                        <td class="px-4 py-3 text-blue-400 font-semibold">86%E</td>
-                        <td class="px-4 py-3">54%N</td>
-                        <td class="px-4 py-3 text-blue-400 font-semibold">89%F</td>
-                        <td class="px-4 py-3">51%P</td>
-                        <td class="px-4 py-3">60%A</td>
-                    </tr>
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3 font-medium text-gray-200">Grant</td>
-                        <td class="px-4 py-3">ENFP-A</td>
-                        <td class="px-4 py-3 text-blue-400 font-semibold">98%E</td>
-                        <td class="px-4 py-3">57%N</td>
-                        <td class="px-4 py-3">62%F</td>
-                        <td class="px-4 py-3">69%P</td>
-                        <td class="px-4 py-3">72%A</td>
-                    </tr>
-                </tbody>
-            </table>
+        <!-- Tabs -->
+        <div class="flex gap-2 mb-4">
+            <button onclick="showTab('dev')" id="tab-dev" class="px-4 py-2 rounded-lg font-medium transition-colors bg-blue-500 text-white">
+                Dev Team
+            </button>
+            <button onclick="showTab('analytics')" id="tab-analytics" class="px-4 py-2 rounded-lg font-medium transition-colors bg-dark-tertiary text-gray-400 hover:bg-dark-secondary">
+                Analytics Team
+            </button>
         </div>
 
-        <div class="bg-dark-secondary p-4 rounded-lg border border-dark-border mt-4">
-            <span class="font-semibold text-gray-200">Pattern:</span>
-            <span class="text-gray-400"> Everyone has 1-2 strong traits (70%+) but stays balanced (55-65%) on others. Even F-types are moderate (52-55%) except Kayla. Grounded intuition (54-70%N) – strategic but practical.</span>
+        <!-- Dev Team Table -->
+        <div id="panel-dev" class="team-panel">
+            <div class="overflow-x-auto rounded-lg border border-dark-border">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-dark-tertiary text-left text-sm uppercase tracking-wide">
+                            <th class="px-4 py-3 font-semibold">Person</th>
+                            <th class="px-4 py-3 font-semibold">Type</th>
+                            <th class="px-4 py-3 font-semibold">E/I</th>
+                            <th class="px-4 py-3 font-semibold">N/S</th>
+                            <th class="px-4 py-3 font-semibold">T/F</th>
+                            <th class="px-4 py-3 font-semibold">J/P</th>
+                            <th class="px-4 py-3 font-semibold">A/T</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-dark-secondary text-gray-400">
+                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                            <td class="px-4 py-3 font-medium text-gray-200">Toma</td>
+                            <td class="px-4 py-3">ENTJ-A</td>
+                            <td class="px-4 py-3">67%E</td>
+                            <td class="px-4 py-3">56%N</td>
+                            <td class="px-4 py-3 text-blue-400 font-semibold">92%T</td>
+                            <td class="px-4 py-3 text-blue-400 font-semibold">97%J</td>
+                            <td class="px-4 py-3">69%A</td>
+                        </tr>
+                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                            <td class="px-4 py-3 font-medium text-gray-200">Brandon</td>
+                            <td class="px-4 py-3">ENTJ-A</td>
+                            <td class="px-4 py-3">61%E</td>
+                            <td class="px-4 py-3">56%N</td>
+                            <td class="px-4 py-3">78%T</td>
+                            <td class="px-4 py-3">61%J</td>
+                            <td class="px-4 py-3">61%A</td>
+                        </tr>
+                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                            <td class="px-4 py-3 font-medium text-gray-200">Jordyn</td>
+                            <td class="px-4 py-3">ENTJ-T</td>
+                            <td class="px-4 py-3">79%E</td>
+                            <td class="px-4 py-3">70%N</td>
+                            <td class="px-4 py-3">61%T</td>
+                            <td class="px-4 py-3">75%J</td>
+                            <td class="px-4 py-3">63%T</td>
+                        </tr>
+                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                            <td class="px-4 py-3 font-medium text-gray-200">John</td>
+                            <td class="px-4 py-3">INTP-T</td>
+                            <td class="px-4 py-3">55%I</td>
+                            <td class="px-4 py-3">68%N</td>
+                            <td class="px-4 py-3">74%T</td>
+                            <td class="px-4 py-3">69%P</td>
+                            <td class="px-4 py-3">51%T</td>
+                        </tr>
+                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                            <td class="px-4 py-3 font-medium text-gray-200">Catherine</td>
+                            <td class="px-4 py-3">INFJ-T</td>
+                            <td class="px-4 py-3">80%I</td>
+                            <td class="px-4 py-3 text-blue-400 font-semibold">81%N</td>
+                            <td class="px-4 py-3">55%F</td>
+                            <td class="px-4 py-3">76%J</td>
+                            <td class="px-4 py-3">76%T</td>
+                        </tr>
+                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                            <td class="px-4 py-3 font-medium text-gray-200">Leor</td>
+                            <td class="px-4 py-3">ENFJ-A</td>
+                            <td class="px-4 py-3">57%E</td>
+                            <td class="px-4 py-3">68%N</td>
+                            <td class="px-4 py-3">52%F</td>
+                            <td class="px-4 py-3">57%J</td>
+                            <td class="px-4 py-3 text-blue-400 font-semibold">79%A</td>
+                        </tr>
+                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                            <td class="px-4 py-3 font-medium text-gray-200">Grant</td>
+                            <td class="px-4 py-3">ENFP-A</td>
+                            <td class="px-4 py-3 text-blue-400 font-semibold">98%E</td>
+                            <td class="px-4 py-3">57%N</td>
+                            <td class="px-4 py-3">62%F</td>
+                            <td class="px-4 py-3">69%P</td>
+                            <td class="px-4 py-3">72%A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-dark-secondary p-4 rounded-lg border border-dark-border mt-4">
+                <span class="font-semibold text-gray-200">Pattern:</span>
+                <span class="text-gray-400"> Everyone has 1-2 strong traits (70%+) but stays balanced (55-65%) on others. Strong N and T orientation with J-dominant leadership.</span>
+            </div>
+        </div>
+
+        <!-- Analytics Team Table -->
+        <div id="panel-analytics" class="team-panel hidden">
+            <div class="overflow-x-auto rounded-lg border border-dark-border">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-dark-tertiary text-left text-sm uppercase tracking-wide">
+                            <th class="px-4 py-3 font-semibold">Person</th>
+                            <th class="px-4 py-3 font-semibold">Type</th>
+                            <th class="px-4 py-3 font-semibold">E/I</th>
+                            <th class="px-4 py-3 font-semibold">N/S</th>
+                            <th class="px-4 py-3 font-semibold">T/F</th>
+                            <th class="px-4 py-3 font-semibold">J/P</th>
+                            <th class="px-4 py-3 font-semibold">A/T</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-dark-secondary text-gray-400">
+                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                            <td class="px-4 py-3 font-medium text-gray-200">Kayla</td>
+                            <td class="px-4 py-3">ENFP-A</td>
+                            <td class="px-4 py-3 text-blue-400 font-semibold">86%E</td>
+                            <td class="px-4 py-3">54%N</td>
+                            <td class="px-4 py-3 text-blue-400 font-semibold">89%F</td>
+                            <td class="px-4 py-3">51%P</td>
+                            <td class="px-4 py-3">60%A</td>
+                        </tr>
+                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                            <td class="px-4 py-3 font-medium text-gray-200">Adriano</td>
+                            <td class="px-4 py-3">ESFJ-T</td>
+                            <td class="px-4 py-3">74%E</td>
+                            <td class="px-4 py-3">65%S</td>
+                            <td class="px-4 py-3">52%F</td>
+                            <td class="px-4 py-3 text-blue-400 font-semibold">86%J</td>
+                            <td class="px-4 py-3">58%T</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="bg-dark-secondary p-4 rounded-lg border border-dark-border mt-4">
+                <span class="font-semibold text-gray-200">Pattern:</span>
+                <span class="text-gray-400"> Mixed profiles – Kayla brings pattern recognition (N) and people focus (F), Adriano brings detail orientation (S) and structure (J). Complementary skill sets for analytics work.</span>
+            </div>
         </div>
 
         <h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
@@ -341,5 +389,25 @@
             Team Hiring Profile
         </div>
     </div>
+
+    <script>
+        function showTab(tab) {
+            // Hide all panels
+            document.querySelectorAll('.team-panel').forEach(panel => {
+                panel.classList.add('hidden');
+            });
+
+            // Reset all tab styles
+            document.getElementById('tab-dev').classList.remove('bg-blue-500', 'text-white');
+            document.getElementById('tab-dev').classList.add('bg-dark-tertiary', 'text-gray-400');
+            document.getElementById('tab-analytics').classList.remove('bg-blue-500', 'text-white');
+            document.getElementById('tab-analytics').classList.add('bg-dark-tertiary', 'text-gray-400');
+
+            // Show selected panel and style tab
+            document.getElementById('panel-' + tab).classList.remove('hidden');
+            document.getElementById('tab-' + tab).classList.remove('bg-dark-tertiary', 'text-gray-400');
+            document.getElementById('tab-' + tab).classList.add('bg-blue-500', 'text-white');
+        }
+    </script>
 </body>
 </html>
