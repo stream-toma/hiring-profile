@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Hiring Profile</title>
+    <style>
+        :root {
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --accent: #58a6ff;
+            --accent-subtle: #388bfd26;
+            --border: #30363d;
+            --green: #3fb950;
+            --red: #f85149;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 2.5rem 0 1rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        h2::before {
+            content: '';
+            width: 4px;
+            height: 1.5rem;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--accent);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        .highlight {
+            background: var(--accent-subtle);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight p {
+            margin-bottom: 0;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+        }
+
+        ul {
+            margin: 1rem 0 1rem 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .lists-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .list-box {
+            background: var(--bg-secondary);
+            padding: 1.25rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .list-box h4 {
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .list-box.hire h4 {
+            color: var(--green);
+        }
+
+        .list-box.avoid h4 {
+            color: var(--red);
+        }
+
+        .list-box ul {
+            margin: 0;
+            padding-left: 1.25rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--bg-tertiary);
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        td {
+            color: var(--text-secondary);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: var(--bg-tertiary);
+        }
+
+        .strong-trait {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .pattern-note {
+            background: var(--bg-secondary);
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .good-signs {
+            color: var(--green);
+        }
+
+        .red-flags {
+            color: var(--red);
+        }
+
+        .scorecard-table td:last-child {
+            width: 80px;
+            text-align: center;
+        }
+
+        .scorecard-total {
+            background: var(--bg-tertiary);
+            font-weight: 600;
+        }
+
+        .pass-note {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--accent-subtle);
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+
+        .trait-table td:nth-child(2) {
+            color: var(--green);
+        }
+
+        .trait-table td:nth-child(3) {
+            color: var(--red);
+        }
+
+        .appendix-section {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .appendix-section h3 {
+            margin-top: 0;
+        }
+
+        .appendix-section p {
+            margin-bottom: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .lists-container {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Team Hiring Profile</h1>
+
+        <h2>Who We Want</h2>
+
+        <div class="highlight">
+            <p><strong>Smart, adaptable people with intellectual horsepower who can think through ambiguity.</strong></p>
+        </div>
+
+        <div class="lists-container">
+            <div class="list-box hire">
+                <h4>We Hire For</h4>
+                <ul>
+                    <li><strong>Logical reasoning</strong> – can structure thinking, not paralyzed by incomplete information</li>
+                    <li><strong>Ownership</strong> – takes initiative, cares beyond their job description</li>
+                    <li><strong>Growth mindset</strong> – has visibly improved, honest about weaknesses</li>
+                    <li><strong>Flexibility</strong> – adapts to different people and situations</li>
+                </ul>
+            </div>
+            <div class="list-box avoid">
+                <h4>We Avoid</h4>
+                <ul>
+                    <li>Extreme personalities who can't flex</li>
+                    <li>People who need heavy structure to function</li>
+                    <li>"That's not my job" mentality</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>The Team</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Person</th>
+                    <th>Type</th>
+                    <th>E/I</th>
+                    <th>N/S</th>
+                    <th>T/F</th>
+                    <th>J/P</th>
+                    <th>A/T</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Toma</strong></td>
+                    <td>ENTJ-A</td>
+                    <td>67%E</td>
+                    <td>56%N</td>
+                    <td class="strong-trait">92%T</td>
+                    <td class="strong-trait">97%J</td>
+                    <td>69%A</td>
+                </tr>
+                <tr>
+                    <td><strong>Brandon</strong></td>
+                    <td>ENTJ-A</td>
+                    <td>61%E</td>
+                    <td>56%N</td>
+                    <td>78%T</td>
+                    <td>61%J</td>
+                    <td>61%A</td>
+                </tr>
+                <tr>
+                    <td><strong>Jordyn</strong></td>
+                    <td>ENTJ-T</td>
+                    <td>79%E</td>
+                    <td>70%N</td>
+                    <td>61%T</td>
+                    <td>75%J</td>
+                    <td>63%T</td>
+                </tr>
+                <tr>
+                    <td><strong>John</strong></td>
+                    <td>INTP-T</td>
+                    <td>55%I</td>
+                    <td>68%N</td>
+                    <td>74%T</td>
+                    <td>69%P</td>
+                    <td>51%T</td>
+                </tr>
+                <tr>
+                    <td><strong>Catherine</strong></td>
+                    <td>INFJ-T</td>
+                    <td>80%I</td>
+                    <td class="strong-trait">81%N</td>
+                    <td>55%F</td>
+                    <td>76%J</td>
+                    <td>76%T</td>
+                </tr>
+                <tr>
+                    <td><strong>Leor</strong></td>
+                    <td>ENFJ-A</td>
+                    <td>57%E</td>
+                    <td>68%N</td>
+                    <td>52%F</td>
+                    <td>57%J</td>
+                    <td class="strong-trait">79%A</td>
+                </tr>
+                <tr>
+                    <td><strong>Kayla</strong></td>
+                    <td>ENFP-A</td>
+                    <td class="strong-trait">86%E</td>
+                    <td>54%N</td>
+                    <td class="strong-trait">89%F</td>
+                    <td>51%P</td>
+                    <td>60%A</td>
+                </tr>
+                <tr>
+                    <td><strong>Grant</strong></td>
+                    <td>ENFP-A</td>
+                    <td class="strong-trait">98%E</td>
+                    <td>57%N</td>
+                    <td>62%F</td>
+                    <td>69%P</td>
+                    <td>72%A</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pattern-note">
+            <strong>Pattern:</strong> Everyone has 1-2 strong traits (70%+) but stays balanced (55-65%) on others. Even F-types are moderate (52-55%) except Kayla. Grounded intuition (54-70%N) – strategic but practical.
+        </div>
+
+        <h2>Screening Questions</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Question</th>
+                    <th class="good-signs">Good Signs</th>
+                    <th class="red-flags">Red Flags</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>"Describe a decision you made without complete information."</td>
+                    <td>Structured thinking, comfort with ambiguity, made a call and adjusted</td>
+                    <td>Freezes without perfect info</td>
+                </tr>
+                <tr>
+                    <td>"Tell me about something you fixed that wasn't your job."</td>
+                    <td>Took initiative, followed through, pride in result</td>
+                    <td>"That's not my job" mentality</td>
+                </tr>
+                <tr>
+                    <td>"What were you bad at a year ago that you're good at now?"</td>
+                    <td>Self-aware, specific actions taken, honest about struggle</td>
+                    <td>Claims always been good</td>
+                </tr>
+                <tr>
+                    <td>"What patterns do you notice in [problem/system]?"</td>
+                    <td>Sees connections, asks insightful questions, comfortable exploring</td>
+                    <td>Only sees surface details</td>
+                </tr>
+                <tr>
+                    <td>"How did you work with someone very different from you?"</td>
+                    <td>Flexible, found common ground, learned from difference</td>
+                    <td>Rigid, dismissive</td>
+                </tr>
+                <tr>
+                    <td>"Here's a vague problem – how would you break it down?"</td>
+                    <td>Asks clarifying questions, structures logically</td>
+                    <td>Jumps to solutions or freezes</td>
+                </tr>
+                <tr>
+                    <td>"When is something 'done'?"</td>
+                    <td>Has standards but ships, articulates trade-offs</td>
+                    <td>Ships anything OR never ships</td>
+                </tr>
+                <tr>
+                    <td>"Explain [technical topic] to a non-expert."</td>
+                    <td>Adjusts language, uses analogies, patient</td>
+                    <td>Uses jargon, gets frustrated</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Scorecard</h2>
+
+        <table class="scorecard-table">
+            <thead>
+                <tr>
+                    <th>Criteria</th>
+                    <th>1-5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Structured thinking under ambiguity</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Ownership mentality</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Evidence of growth</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Pattern recognition</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Adaptability</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Problem decomposition</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Quality standards</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Communication clarity</td>
+                    <td></td>
+                </tr>
+                <tr class="scorecard-total">
+                    <td><strong>Total</strong></td>
+                    <td>/40</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pass-note">
+            <strong>Pass: 28+.</strong> Any score of 1-2 is a concern regardless of total.
+        </div>
+
+        <h2>Personality Test (Optional)</h2>
+
+        <p>If candidate takes 16personalities:</p>
+
+        <table class="trait-table">
+            <thead>
+                <tr>
+                    <th>Trait</th>
+                    <th>Ideal</th>
+                    <th>Hard Pass</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>N/S</td>
+                    <td>55-75% N</td>
+                    <td>&lt;45% N</td>
+                </tr>
+                <tr>
+                    <td>T/F</td>
+                    <td>60%+ T (technical) or 50-65% F (people roles)</td>
+                    <td>&gt;85% F in technical role</td>
+                </tr>
+                <tr>
+                    <td>J/P</td>
+                    <td>Flexible</td>
+                    <td>&gt;90% either way</td>
+                </tr>
+                <tr>
+                    <td>A/T</td>
+                    <td>Flexible</td>
+                    <td>&gt;85% Turbulent</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="pattern-note">
+            <strong>The type doesn't matter.</strong> Look for 1-2 strong traits and 2-3 balanced ones.
+        </div>
+
+        <h2>The Kind of People We Hire</h2>
+
+        <div class="appendix-section">
+            <h3>Smart Without Being Rigid</h3>
+            <p>Our people are genuinely intelligent, but intelligence here doesn't mean knowing everything or being the smartest person in the room. It means being able to think clearly when things are unclear. They structure problems, find patterns, and reason through ambiguity without freezing. They're confident enough to make a call with incomplete information, and humble enough to adjust when they learn more.</p>
+        </div>
+
+        <div class="appendix-section">
+            <h3>Balanced, Not Extreme</h3>
+            <p>Look at our personality data and you'll notice something: almost everyone has 2-3 traits sitting in the 55-65% range. This isn't coincidence. We hire people who can flex. They're analytical enough to engage with hard problems but not so rigid they can't collaborate with different styles. They have strong opinions, but they hold them loosely. Extremists – people who are 90%+ on multiple dimensions – struggle here because they can't adapt.</p>
+        </div>
+
+        <div class="appendix-section">
+            <h3>Ownership Is Instinctive</h3>
+            <p>The people who thrive here don't wait to be told what to do. They see something broken and fix it. They see something that could be better and improve it. This isn't about heroics or working overtime – it's about caring. They take pride in their work and feel genuine responsibility for outcomes, not just tasks. "That's not my job" is a phrase you'll never hear.</p>
+        </div>
+
+        <div class="appendix-section">
+            <h3>Grounded Visionaries</h3>
+            <p>We're all intuitive thinkers – we see patterns, possibilities, and the big picture. But we're not dreamers. Our intuition is grounded (most of us are 54-70% on that scale). We think strategically without losing touch with what's actually achievable. We're not building castles in the sky; we're building things that ship.</p>
+        </div>
+
+        <div class="appendix-section">
+            <h3>Logic First, But Not Logic Only</h3>
+            <p>The team runs on analytical thinking. Even our "Feeling" types score moderate – they can engage with logical arguments and be persuaded by evidence. But we're not robots. We have people who bring warmth, who build relationships, who notice when someone's struggling. The difference is that emotion complements the logic rather than overriding it.</p>
+        </div>
+
+        <div class="appendix-section">
+            <h3>Drive Without Drama</h3>
+            <p>Some of our best people have that slightly restless quality – the Turbulent types who are never quite satisfied, always pushing to improve. But it's channeled into the work, not into anxiety or conflict. Others are rock-solid Assertive types who stay calm when everything's on fire. We need both. What we don't need is drama, ego, or people who make everything about themselves.</p>
+        </div>
+
+        <div class="appendix-section">
+            <h3>They Get Better</h3>
+            <p>This team develops people. Some of our strongest contributors weren't fully formed when they joined – they grew into reliability, into leadership, into expertise. We look for trajectory, not just current state. Someone who was bad at something a year ago and is good at it now is more interesting than someone who's always been "fine" at everything.</p>
+        </div>
+    </div>
+</body>
+</html>
