@@ -1,413 +1,420 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Hiring Profile</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        dark: {
-                            primary: '#0d1117',
-                            secondary: '#161b22',
-                            tertiary: '#21262d',
-                            border: '#30363d',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Hiring Profile</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+dark: {
+primary: '#0d1117',
+secondary: '#161b22',
+tertiary: '#21262d',
+border: '#30363d',
+}
+}
+}
+}
+}
+</script>
 </head>
 <body class="bg-dark-primary text-gray-200 leading-relaxed p-4 md:p-8">
-    <div class="max-w-4xl mx-auto">
-        <h1 class="text-3xl md:text-4xl font-bold mb-2 pb-4 border-b border-dark-border">Team Hiring Profile</h1>
+<div class="max-w-4xl mx-auto">
+<h1 class="text-3xl md:text-4xl font-bold mb-2 pb-4 border-b border-dark-border">Team Hiring Profile</h1>
 
-        <h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
-            <span class="w-1 h-6 bg-blue-400 rounded"></span>
-            Who We Want
-        </h2>
+<h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
+        <span class="w-1 h-6 bg-blue-400 rounded"></span>
+        Who We Want
+    </h2>
 
-        <div class="bg-blue-400/10 p-6 rounded-lg border-l-4 border-blue-400 mb-6">
-            <p class="text-lg font-medium text-gray-100">Smart, adaptable people with intellectual horsepower who can think through ambiguity.</p>
+    <div class="bg-blue-400/10 p-6 rounded-lg border-l-4 border-blue-400 mb-6">
+        <p class="text-lg font-medium text-gray-100">Smart, adaptable people with intellectual horsepower who can think through ambiguity.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4 mb-6">
+        <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
+            <h4 class="text-sm uppercase tracking-wide text-green-400 font-semibold mb-3">We Hire For</h4>
+            <ul class="text-gray-400 space-y-2 list-disc list-inside">
+                <li><span class="text-gray-200 font-medium">Logical reasoning</span> – can structure thinking, not paralyzed by incomplete information</li>
+                <li><span class="text-gray-200 font-medium">Ownership</span> – takes initiative, cares beyond their job description</li>
+                <li><span class="text-gray-200 font-medium">Growth mindset</span> – has visibly improved, honest about weaknesses</li>
+                <li><span class="text-gray-200 font-medium">Flexibility</span> – adapts to different people and situations</li>
+            </ul>
         </div>
-
-        <div class="grid md:grid-cols-2 gap-4 mb-6">
-            <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
-                <h4 class="text-sm uppercase tracking-wide text-green-400 font-semibold mb-3">We Hire For</h4>
-                <ul class="text-gray-400 space-y-2 list-disc list-inside">
-                    <li><span class="text-gray-200 font-medium">Logical reasoning</span> – can structure thinking, not paralyzed by incomplete information</li>
-                    <li><span class="text-gray-200 font-medium">Ownership</span> – takes initiative, cares beyond their job description</li>
-                    <li><span class="text-gray-200 font-medium">Growth mindset</span> – has visibly improved, honest about weaknesses</li>
-                    <li><span class="text-gray-200 font-medium">Flexibility</span> – adapts to different people and situations</li>
-                </ul>
-            </div>
-            <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
-                <h4 class="text-sm uppercase tracking-wide text-red-400 font-semibold mb-3">We Avoid</h4>
-                <ul class="text-gray-400 space-y-2 list-disc list-inside">
-                    <li>Extreme personalities who can't flex</li>
-                    <li>People who need heavy structure to function</li>
-                    <li>"That's not my job" mentality</li>
-                </ul>
-            </div>
+        <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
+            <h4 class="text-sm uppercase tracking-wide text-red-400 font-semibold mb-3">We Avoid</h4>
+            <ul class="text-gray-400 space-y-2 list-disc list-inside">
+                <li>Extreme personalities who can't flex</li>
+                <li>People who need heavy structure to function</li>
+                <li>"That's not my job" mentality</li>
+            </ul>
         </div>
+    </div>
 
-        <h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
-            <span class="w-1 h-6 bg-blue-400 rounded"></span>
-            The Team
-        </h2>
+    <h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
+        <span class="w-1 h-6 bg-blue-400 rounded"></span>
+        The Team
+    </h2>
 
-        <!-- Tabs -->
-        <div class="flex gap-2 mb-4">
-            <button onclick="showTab('dev')" id="tab-dev" class="px-4 py-2 rounded-lg font-medium transition-colors bg-blue-500 text-white">
-                Dev Team
-            </button>
-            <button onclick="showTab('analytics')" id="tab-analytics" class="px-4 py-2 rounded-lg font-medium transition-colors bg-dark-tertiary text-gray-400 hover:bg-dark-secondary">
-                Analytics Team
-            </button>
-        </div>
+    <div class="mb-4 flex gap-4 text-sm items-center">
+        <span class="text-gray-400">Groups:</span>
+        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-purple-400"></span> <span class="text-purple-400 font-semibold">Analysts</span></span>
+        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> <span class="text-emerald-400 font-semibold">Diplomats</span></span>
+        <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-sky-400"></span> <span class="text-sky-400 font-semibold">Sentinels</span></span>
+    </div>
 
-        <!-- Dev Team Table -->
-        <div id="panel-dev" class="team-panel">
-            <div class="overflow-x-auto rounded-lg border border-dark-border">
-                <table class="w-full">
-                    <thead>
-                        <tr class="bg-dark-tertiary text-left text-sm uppercase tracking-wide">
-                            <th class="px-4 py-3 font-semibold">Person</th>
-                            <th class="px-4 py-3 font-semibold">Type</th>
-                            <th class="px-4 py-3 font-semibold">E/I</th>
-                            <th class="px-4 py-3 font-semibold">N/S</th>
-                            <th class="px-4 py-3 font-semibold">T/F</th>
-                            <th class="px-4 py-3 font-semibold">J/P</th>
-                            <th class="px-4 py-3 font-semibold">A/T</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-dark-secondary text-gray-400">
-                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                            <td class="px-4 py-3 font-medium text-gray-200">Toma</td>
-                            <td class="px-4 py-3">ENTJ-A</td>
-                            <td class="px-4 py-3">67%E</td>
-                            <td class="px-4 py-3">56%N</td>
-                            <td class="px-4 py-3 text-blue-400 font-semibold">92%T</td>
-                            <td class="px-4 py-3 text-blue-400 font-semibold">97%J</td>
-                            <td class="px-4 py-3">69%A</td>
-                        </tr>
-                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                            <td class="px-4 py-3 font-medium text-gray-200">Brandon</td>
-                            <td class="px-4 py-3">ENTJ-A</td>
-                            <td class="px-4 py-3">61%E</td>
-                            <td class="px-4 py-3">56%N</td>
-                            <td class="px-4 py-3">78%T</td>
-                            <td class="px-4 py-3">61%J</td>
-                            <td class="px-4 py-3">61%A</td>
-                        </tr>
-                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                            <td class="px-4 py-3 font-medium text-gray-200">Jordyn</td>
-                            <td class="px-4 py-3">ENTJ-T</td>
-                            <td class="px-4 py-3">79%E</td>
-                            <td class="px-4 py-3">70%N</td>
-                            <td class="px-4 py-3">61%T</td>
-                            <td class="px-4 py-3">75%J</td>
-                            <td class="px-4 py-3">63%T</td>
-                        </tr>
-                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                            <td class="px-4 py-3 font-medium text-gray-200">John</td>
-                            <td class="px-4 py-3">INTP-T</td>
-                            <td class="px-4 py-3">55%I</td>
-                            <td class="px-4 py-3">68%N</td>
-                            <td class="px-4 py-3">74%T</td>
-                            <td class="px-4 py-3">69%P</td>
-                            <td class="px-4 py-3">51%T</td>
-                        </tr>
-                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                            <td class="px-4 py-3 font-medium text-gray-200">Catherine</td>
-                            <td class="px-4 py-3">INFJ-T</td>
-                            <td class="px-4 py-3">80%I</td>
-                            <td class="px-4 py-3 text-blue-400 font-semibold">81%N</td>
-                            <td class="px-4 py-3">55%F</td>
-                            <td class="px-4 py-3">76%J</td>
-                            <td class="px-4 py-3">76%T</td>
-                        </tr>
-                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                            <td class="px-4 py-3 font-medium text-gray-200">Leor</td>
-                            <td class="px-4 py-3">ENFJ-A</td>
-                            <td class="px-4 py-3">57%E</td>
-                            <td class="px-4 py-3">68%N</td>
-                            <td class="px-4 py-3">52%F</td>
-                            <td class="px-4 py-3">57%J</td>
-                            <td class="px-4 py-3 text-blue-400 font-semibold">79%A</td>
-                        </tr>
-                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                            <td class="px-4 py-3 font-medium text-gray-200">Grant</td>
-                            <td class="px-4 py-3">ENFP-A</td>
-                            <td class="px-4 py-3 text-blue-400 font-semibold">98%E</td>
-                            <td class="px-4 py-3">57%N</td>
-                            <td class="px-4 py-3">62%F</td>
-                            <td class="px-4 py-3">69%P</td>
-                            <td class="px-4 py-3">72%A</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <!-- Tabs -->
+    <div class="flex gap-2 mb-4">
+        <button onclick="showTab('dev')" id="tab-dev" class="px-4 py-2 rounded-lg font-medium transition-colors bg-blue-500 text-white">
+            Dev Team
+        </button>
+        <button onclick="showTab('analytics')" id="tab-analytics" class="px-4 py-2 rounded-lg font-medium transition-colors bg-dark-tertiary text-gray-400 hover:bg-dark-secondary">
+            Analytics Team
+        </button>
+    </div>
 
-            <div class="bg-dark-secondary p-4 rounded-lg border border-dark-border mt-4">
-                <span class="font-semibold text-gray-200">Pattern:</span>
-                <span class="text-gray-400"> Everyone has 1-2 strong traits (70%+) but stays balanced (55-65%) on others. Strong N and T orientation with J-dominant leadership.</span>
-            </div>
-        </div>
-
-        <!-- Analytics Team Table -->
-        <div id="panel-analytics" class="team-panel hidden">
-            <div class="overflow-x-auto rounded-lg border border-dark-border">
-                <table class="w-full">
-                    <thead>
-                        <tr class="bg-dark-tertiary text-left text-sm uppercase tracking-wide">
-                            <th class="px-4 py-3 font-semibold">Person</th>
-                            <th class="px-4 py-3 font-semibold">Type</th>
-                            <th class="px-4 py-3 font-semibold">E/I</th>
-                            <th class="px-4 py-3 font-semibold">N/S</th>
-                            <th class="px-4 py-3 font-semibold">T/F</th>
-                            <th class="px-4 py-3 font-semibold">J/P</th>
-                            <th class="px-4 py-3 font-semibold">A/T</th>
-                        </tr>
-                    </thead>
-                    <tbody class="bg-dark-secondary text-gray-400">
-                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                            <td class="px-4 py-3 font-medium text-gray-200">Kayla</td>
-                            <td class="px-4 py-3">ENFP-A</td>
-                            <td class="px-4 py-3 text-blue-400 font-semibold">86%E</td>
-                            <td class="px-4 py-3">54%N</td>
-                            <td class="px-4 py-3 text-blue-400 font-semibold">89%F</td>
-                            <td class="px-4 py-3">51%P</td>
-                            <td class="px-4 py-3">60%A</td>
-                        </tr>
-                        <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                            <td class="px-4 py-3 font-medium text-gray-200">Adriano</td>
-                            <td class="px-4 py-3">ESFJ-T</td>
-                            <td class="px-4 py-3">74%E</td>
-                            <td class="px-4 py-3">65%S</td>
-                            <td class="px-4 py-3">52%F</td>
-                            <td class="px-4 py-3 text-blue-400 font-semibold">86%J</td>
-                            <td class="px-4 py-3">58%T</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="bg-dark-secondary p-4 rounded-lg border border-dark-border mt-4">
-                <span class="font-semibold text-gray-200">Pattern:</span>
-                <span class="text-gray-400"> Mixed profiles – Kayla brings pattern recognition (N) and people focus (F), Adriano brings detail orientation (S) and structure (J). Complementary skill sets for analytics work.</span>
-            </div>
-        </div>
-
-        <h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
-            <span class="w-1 h-6 bg-blue-400 rounded"></span>
-            Screening Questions
-        </h2>
-
+    <!-- Dev Team Table -->
+    <div id="panel-dev" class="team-panel">
         <div class="overflow-x-auto rounded-lg border border-dark-border">
             <table class="w-full">
                 <thead>
                     <tr class="bg-dark-tertiary text-left text-sm uppercase tracking-wide">
-                        <th class="px-4 py-3 font-semibold">Question</th>
-                        <th class="px-4 py-3 font-semibold text-green-400">Good Signs</th>
-                        <th class="px-4 py-3 font-semibold text-red-400">Red Flags</th>
+                        <th class="px-4 py-3 font-semibold">Person</th>
+                        <th class="px-4 py-3 font-semibold">Type</th>
+                        <th class="px-4 py-3 font-semibold">E/I</th>
+                        <th class="px-4 py-3 font-semibold">N/S</th>
+                        <th class="px-4 py-3 font-semibold">T/F</th>
+                        <th class="px-4 py-3 font-semibold">J/P</th>
+                        <th class="px-4 py-3 font-semibold">A/T</th>
                     </tr>
                 </thead>
                 <tbody class="bg-dark-secondary text-gray-400">
                     <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3">"Describe a decision you made without complete information."</td>
-                        <td class="px-4 py-3">Structured thinking, comfort with ambiguity, made a call and adjusted</td>
-                        <td class="px-4 py-3">Freezes without perfect info</td>
+                        <td class="px-4 py-3 font-medium text-gray-200">Toma</td>
+                        <td class="px-4 py-3 font-semibold text-purple-400">ENTJ-A</td>
+                        <td class="px-4 py-3">67%E</td>
+                        <td class="px-4 py-3">56%N</td>
+                        <td class="px-4 py-3 text-blue-400 font-semibold">92%T</td>
+                        <td class="px-4 py-3 text-blue-400 font-semibold">97%J</td>
+                        <td class="px-4 py-3">69%A</td>
                     </tr>
                     <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3">"Tell me about something you fixed that wasn't your job."</td>
-                        <td class="px-4 py-3">Took initiative, followed through, pride in result</td>
-                        <td class="px-4 py-3">"That's not my job" mentality</td>
+                        <td class="px-4 py-3 font-medium text-gray-200">Brandon</td>
+                        <td class="px-4 py-3 font-semibold text-purple-400">ENTJ-A</td>
+                        <td class="px-4 py-3">61%E</td>
+                        <td class="px-4 py-3">56%N</td>
+                        <td class="px-4 py-3">78%T</td>
+                        <td class="px-4 py-3">61%J</td>
+                        <td class="px-4 py-3">61%A</td>
                     </tr>
                     <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3">"What were you bad at a year ago that you're good at now?"</td>
-                        <td class="px-4 py-3">Self-aware, specific actions taken, honest about struggle</td>
-                        <td class="px-4 py-3">Claims always been good</td>
+                        <td class="px-4 py-3 font-medium text-gray-200">Jordyn</td>
+                        <td class="px-4 py-3 font-semibold text-purple-400">ENTJ-T</td>
+                        <td class="px-4 py-3">79%E</td>
+                        <td class="px-4 py-3">70%N</td>
+                        <td class="px-4 py-3">61%T</td>
+                        <td class="px-4 py-3">75%J</td>
+                        <td class="px-4 py-3">63%T</td>
                     </tr>
                     <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3">"What patterns do you notice in [problem/system]?"</td>
-                        <td class="px-4 py-3">Sees connections, asks insightful questions, comfortable exploring</td>
-                        <td class="px-4 py-3">Only sees surface details</td>
+                        <td class="px-4 py-3 font-medium text-gray-200">John</td>
+                        <td class="px-4 py-3 font-semibold text-purple-400">INTP-T</td>
+                        <td class="px-4 py-3">55%I</td>
+                        <td class="px-4 py-3">68%N</td>
+                        <td class="px-4 py-3">74%T</td>
+                        <td class="px-4 py-3">69%P</td>
+                        <td class="px-4 py-3">51%T</td>
                     </tr>
                     <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3">"How did you work with someone very different from you?"</td>
-                        <td class="px-4 py-3">Flexible, found common ground, learned from difference</td>
-                        <td class="px-4 py-3">Rigid, dismissive</td>
+                        <td class="px-4 py-3 font-medium text-gray-200">Catherine</td>
+                        <td class="px-4 py-3 font-semibold text-emerald-400">INFJ-T</td>
+                        <td class="px-4 py-3">80%I</td>
+                        <td class="px-4 py-3 text-blue-400 font-semibold">81%N</td>
+                        <td class="px-4 py-3">55%F</td>
+                        <td class="px-4 py-3">76%J</td>
+                        <td class="px-4 py-3">76%T</td>
                     </tr>
                     <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3">"Here's a vague problem – how would you break it down?"</td>
-                        <td class="px-4 py-3">Asks clarifying questions, structures logically</td>
-                        <td class="px-4 py-3">Jumps to solutions or freezes</td>
+                        <td class="px-4 py-3 font-medium text-gray-200">Leor</td>
+                        <td class="px-4 py-3 font-semibold text-emerald-400">ENFJ-A</td>
+                        <td class="px-4 py-3">57%E</td>
+                        <td class="px-4 py-3">68%N</td>
+                        <td class="px-4 py-3">52%F</td>
+                        <td class="px-4 py-3">57%J</td>
+                        <td class="px-4 py-3 text-blue-400 font-semibold">79%A</td>
                     </tr>
                     <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3">"When is something 'done'?"</td>
-                        <td class="px-4 py-3">Has standards but ships, articulates trade-offs</td>
-                        <td class="px-4 py-3">Ships anything OR never ships</td>
-                    </tr>
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3">"Explain [technical topic] to a non-expert."</td>
-                        <td class="px-4 py-3">Adjusts language, uses analogies, patient</td>
-                        <td class="px-4 py-3">Uses jargon, gets frustrated</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
-            <span class="w-1 h-6 bg-blue-400 rounded"></span>
-            Scorecard
-        </h2>
-
-        <div class="overflow-x-auto rounded-lg border border-dark-border">
-            <table class="w-full">
-                <thead>
-                    <tr class="bg-dark-tertiary text-left text-sm uppercase tracking-wide">
-                        <th class="px-4 py-3 font-semibold">Criteria</th>
-                        <th class="px-4 py-3 font-semibold w-20 text-center">1-5</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-dark-secondary text-gray-400">
-                    <tr class="border-t border-dark-border"><td class="px-4 py-3">Structured thinking under ambiguity</td><td class="px-4 py-3 text-center"></td></tr>
-                    <tr class="border-t border-dark-border"><td class="px-4 py-3">Ownership mentality</td><td class="px-4 py-3 text-center"></td></tr>
-                    <tr class="border-t border-dark-border"><td class="px-4 py-3">Evidence of growth</td><td class="px-4 py-3 text-center"></td></tr>
-                    <tr class="border-t border-dark-border"><td class="px-4 py-3">Pattern recognition</td><td class="px-4 py-3 text-center"></td></tr>
-                    <tr class="border-t border-dark-border"><td class="px-4 py-3">Adaptability</td><td class="px-4 py-3 text-center"></td></tr>
-                    <tr class="border-t border-dark-border"><td class="px-4 py-3">Problem decomposition</td><td class="px-4 py-3 text-center"></td></tr>
-                    <tr class="border-t border-dark-border"><td class="px-4 py-3">Quality standards</td><td class="px-4 py-3 text-center"></td></tr>
-                    <tr class="border-t border-dark-border"><td class="px-4 py-3">Communication clarity</td><td class="px-4 py-3 text-center"></td></tr>
-                    <tr class="border-t border-dark-border bg-dark-tertiary font-semibold text-gray-200">
-                        <td class="px-4 py-3">Total</td>
-                        <td class="px-4 py-3 text-center">/40</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="bg-blue-400/10 p-4 rounded-lg mt-4">
-            <span class="font-semibold text-gray-200">Pass: 28+.</span>
-            <span class="text-gray-400"> Any score of 1-2 is a concern regardless of total.</span>
-        </div>
-
-        <h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
-            <span class="w-1 h-6 bg-blue-400 rounded"></span>
-            Personality Test (Optional)
-        </h2>
-
-        <p class="text-gray-400 mb-4">If candidate takes 16personalities:</p>
-
-        <div class="overflow-x-auto rounded-lg border border-dark-border">
-            <table class="w-full">
-                <thead>
-                    <tr class="bg-dark-tertiary text-left text-sm uppercase tracking-wide">
-                        <th class="px-4 py-3 font-semibold">Trait</th>
-                        <th class="px-4 py-3 font-semibold text-green-400">Ideal</th>
-                        <th class="px-4 py-3 font-semibold text-red-400">Hard Pass</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-dark-secondary text-gray-400">
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3">N/S</td>
-                        <td class="px-4 py-3 text-green-400">55-75% N</td>
-                        <td class="px-4 py-3 text-red-400">&lt;45% N</td>
-                    </tr>
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3">T/F</td>
-                        <td class="px-4 py-3 text-green-400">60%+ T (technical) or 50-65% F (people roles)</td>
-                        <td class="px-4 py-3 text-red-400">&gt;85% F in technical role</td>
-                    </tr>
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3">J/P</td>
-                        <td class="px-4 py-3 text-green-400">Flexible</td>
-                        <td class="px-4 py-3 text-red-400">&gt;90% either way</td>
-                    </tr>
-                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
-                        <td class="px-4 py-3">A/T</td>
-                        <td class="px-4 py-3 text-green-400">Flexible</td>
-                        <td class="px-4 py-3 text-red-400">&gt;85% Turbulent</td>
+                        <td class="px-4 py-3 font-medium text-gray-200">Grant</td>
+                        <td class="px-4 py-3 font-semibold text-emerald-400">ENFP-A</td>
+                        <td class="px-4 py-3 text-blue-400 font-semibold">98%E</td>
+                        <td class="px-4 py-3">57%N</td>
+                        <td class="px-4 py-3">62%F</td>
+                        <td class="px-4 py-3">69%P</td>
+                        <td class="px-4 py-3">72%A</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
         <div class="bg-dark-secondary p-4 rounded-lg border border-dark-border mt-4">
-            <span class="font-semibold text-gray-200">The type doesn't matter.</span>
-            <span class="text-gray-400"> Look for 1-2 strong traits and 2-3 balanced ones.</span>
-        </div>
-
-        <h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
-            <span class="w-1 h-6 bg-blue-400 rounded"></span>
-            The Kind of People We Hire
-        </h2>
-
-        <div class="space-y-4">
-            <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
-                <h3 class="text-lg font-semibold text-blue-400 mb-2">Smart Without Being Rigid</h3>
-                <p class="text-gray-400">Our people are genuinely intelligent, but intelligence here doesn't mean knowing everything or being the smartest person in the room. It means being able to think clearly when things are unclear. They structure problems, find patterns, and reason through ambiguity without freezing. They're confident enough to make a call with incomplete information, and humble enough to adjust when they learn more.</p>
-            </div>
-
-            <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
-                <h3 class="text-lg font-semibold text-blue-400 mb-2">Balanced, Not Extreme</h3>
-                <p class="text-gray-400">Look at our personality data and you'll notice something: almost everyone has 2-3 traits sitting in the 55-65% range. This isn't coincidence. We hire people who can flex. They're analytical enough to engage with hard problems but not so rigid they can't collaborate with different styles. They have strong opinions, but they hold them loosely. Extremists – people who are 90%+ on multiple dimensions – struggle here because they can't adapt.</p>
-            </div>
-
-            <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
-                <h3 class="text-lg font-semibold text-blue-400 mb-2">Ownership Is Instinctive</h3>
-                <p class="text-gray-400">The people who thrive here don't wait to be told what to do. They see something broken and fix it. They see something that could be better and improve it. This isn't about heroics or working overtime – it's about caring. They take pride in their work and feel genuine responsibility for outcomes, not just tasks. "That's not my job" is a phrase you'll never hear.</p>
-            </div>
-
-            <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
-                <h3 class="text-lg font-semibold text-blue-400 mb-2">Grounded Visionaries</h3>
-                <p class="text-gray-400">We're all intuitive thinkers – we see patterns, possibilities, and the big picture. But we're not dreamers. Our intuition is grounded (most of us are 54-70% on that scale). We think strategically without losing touch with what's actually achievable. We're not building castles in the sky; we're building things that ship.</p>
-            </div>
-
-            <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
-                <h3 class="text-lg font-semibold text-blue-400 mb-2">Logic First, But Not Logic Only</h3>
-                <p class="text-gray-400">The team runs on analytical thinking. Even our "Feeling" types score moderate – they can engage with logical arguments and be persuaded by evidence. But we're not robots. We have people who bring warmth, who build relationships, who notice when someone's struggling. The difference is that emotion complements the logic rather than overriding it.</p>
-            </div>
-
-            <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
-                <h3 class="text-lg font-semibold text-blue-400 mb-2">Drive Without Drama</h3>
-                <p class="text-gray-400">Some of our best people have that slightly restless quality – the Turbulent types who are never quite satisfied, always pushing to improve. But it's channeled into the work, not into anxiety or conflict. Others are rock-solid Assertive types who stay calm when everything's on fire. We need both. What we don't need is drama, ego, or people who make everything about themselves.</p>
-            </div>
-
-            <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
-                <h3 class="text-lg font-semibold text-blue-400 mb-2">They Get Better</h3>
-                <p class="text-gray-400">This team develops people. Some of our strongest contributors weren't fully formed when they joined – they grew into reliability, into leadership, into expertise. We look for trajectory, not just current state. Someone who was bad at something a year ago and is good at it now is more interesting than someone who's always been "fine" at everything.</p>
-            </div>
-        </div>
-
-        <div class="mt-12 pt-6 border-t border-dark-border text-center text-gray-500 text-sm">
-            Team Hiring Profile
+            <span class="font-semibold text-gray-200">Pattern:</span>
+            <span class="text-gray-400"> Heavy concentration of <span class="text-purple-400">Analysts</span> and <span class="text-emerald-400">Diplomats</span>. Everyone has 1-2 strong traits (70%+) but stays balanced (55-65%) on others. Strong N and T orientation with J-dominant leadership.</span>
         </div>
     </div>
 
-    <script>
-        function showTab(tab) {
-            // Hide all panels
-            document.querySelectorAll('.team-panel').forEach(panel => {
-                panel.classList.add('hidden');
-            });
+    <!-- Analytics Team Table -->
+    <div id="panel-analytics" class="team-panel hidden">
+        <div class="overflow-x-auto rounded-lg border border-dark-border">
+            <table class="w-full">
+                <thead>
+                    <tr class="bg-dark-tertiary text-left text-sm uppercase tracking-wide">
+                        <th class="px-4 py-3 font-semibold">Person</th>
+                        <th class="px-4 py-3 font-semibold">Type</th>
+                        <th class="px-4 py-3 font-semibold">E/I</th>
+                        <th class="px-4 py-3 font-semibold">N/S</th>
+                        <th class="px-4 py-3 font-semibold">T/F</th>
+                        <th class="px-4 py-3 font-semibold">J/P</th>
+                        <th class="px-4 py-3 font-semibold">A/T</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-dark-secondary text-gray-400">
+                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                        <td class="px-4 py-3 font-medium text-gray-200">Kayla</td>
+                        <td class="px-4 py-3 font-semibold text-emerald-400">ENFP-A</td>
+                        <td class="px-4 py-3 text-blue-400 font-semibold">86%E</td>
+                        <td class="px-4 py-3">54%N</td>
+                        <td class="px-4 py-3 text-blue-400 font-semibold">89%F</td>
+                        <td class="px-4 py-3">51%P</td>
+                        <td class="px-4 py-3">60%A</td>
+                    </tr>
+                    <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                        <td class="px-4 py-3 font-medium text-gray-200">Adriano</td>
+                        <td class="px-4 py-3 font-semibold text-sky-400">ESFJ-T</td>
+                        <td class="px-4 py-3">74%E</td>
+                        <td class="px-4 py-3">65%S</td>
+                        <td class="px-4 py-3">52%F</td>
+                        <td class="px-4 py-3 text-blue-400 font-semibold">86%J</td>
+                        <td class="px-4 py-3">58%T</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-            // Reset all tab styles
-            document.getElementById('tab-dev').classList.remove('bg-blue-500', 'text-white');
-            document.getElementById('tab-dev').classList.add('bg-dark-tertiary', 'text-gray-400');
-            document.getElementById('tab-analytics').classList.remove('bg-blue-500', 'text-white');
-            document.getElementById('tab-analytics').classList.add('bg-dark-tertiary', 'text-gray-400');
+        <div class="bg-dark-secondary p-4 rounded-lg border border-dark-border mt-4">
+            <span class="font-semibold text-gray-200">Pattern:</span>
+            <span class="text-gray-400"> Mixed profiles – Kayla (<span class="text-emerald-400">Diplomat</span>) brings pattern recognition (N) and people focus (F), Adriano (<span class="text-sky-400">Sentinel</span>) brings detail orientation (S) and structure (J). Complementary skill sets for analytics work.</span>
+        </div>
+    </div>
 
-            // Show selected panel and style tab
-            document.getElementById('panel-' + tab).classList.remove('hidden');
-            document.getElementById('tab-' + tab).classList.remove('bg-dark-tertiary', 'text-gray-400');
-            document.getElementById('tab-' + tab).classList.add('bg-blue-500', 'text-white');
-        }
-    </script>
+    <h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
+        <span class="w-1 h-6 bg-blue-400 rounded"></span>
+        Screening Questions
+    </h2>
+
+    <div class="overflow-x-auto rounded-lg border border-dark-border">
+        <table class="w-full">
+            <thead>
+                <tr class="bg-dark-tertiary text-left text-sm uppercase tracking-wide">
+                    <th class="px-4 py-3 font-semibold">Question</th>
+                    <th class="px-4 py-3 font-semibold text-green-400">Good Signs</th>
+                    <th class="px-4 py-3 font-semibold text-red-400">Red Flags</th>
+                </tr>
+            </thead>
+            <tbody class="bg-dark-secondary text-gray-400">
+                <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                    <td class="px-4 py-3">"Describe a decision you made without complete information."</td>
+                    <td class="px-4 py-3">Structured thinking, comfort with ambiguity, made a call and adjusted</td>
+                    <td class="px-4 py-3">Freezes without perfect info</td>
+                </tr>
+                <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                    <td class="px-4 py-3">"Tell me about something you fixed that wasn't your job."</td>
+                    <td class="px-4 py-3">Took initiative, followed through, pride in result</td>
+                    <td class="px-4 py-3">"That's not my job" mentality</td>
+                </tr>
+                <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                    <td class="px-4 py-3">"What were you bad at a year ago that you're good at now?"</td>
+                    <td class="px-4 py-3">Self-aware, specific actions taken, honest about struggle</td>
+                    <td class="px-4 py-3">Claims always been good</td>
+                </tr>
+                <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                    <td class="px-4 py-3">"What patterns do you notice in [problem/system]?"</td>
+                    <td class="px-4 py-3">Sees connections, asks insightful questions, comfortable exploring</td>
+                    <td class="px-4 py-3">Only sees surface details</td>
+                </tr>
+                <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                    <td class="px-4 py-3">"How did you work with someone very different from you?"</td>
+                    <td class="px-4 py-3">Flexible, found common ground, learned from difference</td>
+                    <td class="px-4 py-3">Rigid, dismissive</td>
+                </tr>
+                <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                    <td class="px-4 py-3">"Here's a vague problem – how would you break it down?"</td>
+                    <td class="px-4 py-3">Asks clarifying questions, structures logically</td>
+                    <td class="px-4 py-3">Jumps to solutions or freezes</td>
+                </tr>
+                <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                    <td class="px-4 py-3">"When is something 'done'?"</td>
+                    <td class="px-4 py-3">Has standards but ships, articulates trade-offs</td>
+                    <td class="px-4 py-3">Ships anything OR never ships</td>
+                </tr>
+                <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                    <td class="px-4 py-3">"Explain [technical topic] to a non-expert."</td>
+                    <td class="px-4 py-3">Adjusts language, uses analogies, patient</td>
+                    <td class="px-4 py-3">Uses jargon, gets frustrated</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
+        <span class="w-1 h-6 bg-blue-400 rounded"></span>
+        Scorecard
+    </h2>
+
+    <div class="overflow-x-auto rounded-lg border border-dark-border">
+        <table class="w-full">
+            <thead>
+                <tr class="bg-dark-tertiary text-left text-sm uppercase tracking-wide">
+                    <th class="px-4 py-3 font-semibold">Criteria</th>
+                    <th class="px-4 py-3 font-semibold w-20 text-center">1-5</th>
+                </tr>
+            </thead>
+            <tbody class="bg-dark-secondary text-gray-400">
+                <tr class="border-t border-dark-border"><td class="px-4 py-3">Structured thinking under ambiguity</td><td class="px-4 py-3 text-center"></td></tr>
+                <tr class="border-t border-dark-border"><td class="px-4 py-3">Ownership mentality</td><td class="px-4 py-3 text-center"></td></tr>
+                <tr class="border-t border-dark-border"><td class="px-4 py-3">Evidence of growth</td><td class="px-4 py-3 text-center"></td></tr>
+                <tr class="border-t border-dark-border"><td class="px-4 py-3">Pattern recognition</td><td class="px-4 py-3 text-center"></td></tr>
+                <tr class="border-t border-dark-border"><td class="px-4 py-3">Adaptability</td><td class="px-4 py-3 text-center"></td></tr>
+                <tr class="border-t border-dark-border"><td class="px-4 py-3">Problem decomposition</td><td class="px-4 py-3 text-center"></td></tr>
+                <tr class="border-t border-dark-border"><td class="px-4 py-3">Quality standards</td><td class="px-4 py-3 text-center"></td></tr>
+                <tr class="border-t border-dark-border"><td class="px-4 py-3">Communication clarity</td><td class="px-4 py-3 text-center"></td></tr>
+                <tr class="border-t border-dark-border bg-dark-tertiary font-semibold text-gray-200">
+                    <td class="px-4 py-3">Total</td>
+                    <td class="px-4 py-3 text-center">/40</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-blue-400/10 p-4 rounded-lg mt-4">
+        <span class="font-semibold text-gray-200">Pass: 28+.</span>
+        <span class="text-gray-400"> Any score of 1-2 is a concern regardless of total.</span>
+    </div>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
+        <span class="w-1 h-6 bg-blue-400 rounded"></span>
+        Personality Test (Optional)
+    </h2>
+
+    <p class="text-gray-400 mb-4">If candidate takes 16personalities:</p>
+
+    <div class="overflow-x-auto rounded-lg border border-dark-border">
+        <table class="w-full">
+            <thead>
+                <tr class="bg-dark-tertiary text-left text-sm uppercase tracking-wide">
+                    <th class="px-4 py-3 font-semibold">Trait</th>
+                    <th class="px-4 py-3 font-semibold text-green-400">Ideal</th>
+                    <th class="px-4 py-3 font-semibold text-red-400">Hard Pass</th>
+                </tr>
+            </thead>
+            <tbody class="bg-dark-secondary text-gray-400">
+                <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                    <td class="px-4 py-3">N/S</td>
+                    <td class="px-4 py-3 text-green-400">55-75% N</td>
+                    <td class="px-4 py-3 text-red-400">&lt;45% N</td>
+                </tr>
+                <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                    <td class="px-4 py-3">T/F</td>
+                    <td class="px-4 py-3 text-green-400">60%+ T (technical) or 50-65% F (people roles)</td>
+                    <td class="px-4 py-3 text-red-400">&gt;85% F in technical role</td>
+                </tr>
+                <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                    <td class="px-4 py-3">J/P</td>
+                    <td class="px-4 py-3 text-green-400">Flexible</td>
+                    <td class="px-4 py-3 text-red-400">&gt;90% either way</td>
+                </tr>
+                <tr class="border-t border-dark-border hover:bg-dark-tertiary">
+                    <td class="px-4 py-3">A/T</td>
+                    <td class="px-4 py-3 text-green-400">Flexible</td>
+                    <td class="px-4 py-3 text-red-400">&gt;85% Turbulent</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="bg-dark-secondary p-4 rounded-lg border border-dark-border mt-4">
+        <span class="font-semibold text-gray-200">The type doesn't matter.</span>
+        <span class="text-gray-400"> Look for 1-2 strong traits and 2-3 balanced ones.</span>
+    </div>
+
+    <h2 class="text-2xl font-semibold mt-10 mb-4 flex items-center gap-2">
+        <span class="w-1 h-6 bg-blue-400 rounded"></span>
+        The Kind of People We Hire
+    </h2>
+
+    <div class="space-y-4">
+        <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
+            <h3 class="text-lg font-semibold text-blue-400 mb-2">Smart Without Being Rigid</h3>
+            <p class="text-gray-400">Our people are genuinely intelligent, but intelligence here doesn't mean knowing everything or being the smartest person in the room. It means being able to think clearly when things are unclear. They structure problems, find patterns, and reason through ambiguity without freezing. They're confident enough to make a call with incomplete information, and humble enough to adjust when they learn more.</p>
+        </div>
+
+        <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
+            <h3 class="text-lg font-semibold text-blue-400 mb-2">Balanced, Not Extreme</h3>
+            <p class="text-gray-400">Look at our personality data and you'll notice something: almost everyone has 2-3 traits sitting in the 55-65% range. This isn't coincidence. We hire people who can flex. They're analytical enough to engage with hard problems but not so rigid they can't collaborate with different styles. They have strong opinions, but they hold them loosely. Extremists – people who are 90%+ on multiple dimensions – struggle here because they can't adapt.</p>
+        </div>
+
+        <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
+            <h3 class="text-lg font-semibold text-blue-400 mb-2">Ownership Is Instinctive</h3>
+            <p class="text-gray-400">The people who thrive here don't wait to be told what to do. They see something broken and fix it. They see something that could be better and improve it. This isn't about heroics or working overtime – it's about caring. They take pride in their work and feel genuine responsibility for outcomes, not just tasks. "That's not my job" is a phrase you'll never hear.</p>
+        </div>
+
+        <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
+            <h3 class="text-lg font-semibold text-blue-400 mb-2">Grounded Visionaries</h3>
+            <p class="text-gray-400">We're all intuitive thinkers – we see patterns, possibilities, and the big picture. But we're not dreamers. Our intuition is grounded (most of us are 54-70% on that scale). We think strategically without losing touch with what's actually achievable. We're not building castles in the sky; we're building things that ship.</p>
+        </div>
+
+        <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
+            <h3 class="text-lg font-semibold text-blue-400 mb-2">Logic First, But Not Logic Only</h3>
+            <p class="text-gray-400">The team runs on analytical thinking. Even our "Feeling" types score moderate – they can engage with logical arguments and be persuaded by evidence. But we're not robots. We have people who bring warmth, who build relationships, who notice when someone's struggling. The difference is that emotion complements the logic rather than overriding it.</p>
+        </div>
+
+        <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
+            <h3 class="text-lg font-semibold text-blue-400 mb-2">Drive Without Drama</h3>
+            <p class="text-gray-400">Some of our best people have that slightly restless quality – the Turbulent types who are never quite satisfied, always pushing to improve. But it's channeled into the work, not into anxiety or conflict. Others are rock-solid Assertive types who stay calm when everything's on fire. We need both. What we don't need is drama, ego, or people who make everything about themselves.</p>
+        </div>
+
+        <div class="bg-dark-secondary p-5 rounded-lg border border-dark-border">
+            <h3 class="text-lg font-semibold text-blue-400 mb-2">They Get Better</h3>
+            <p class="text-gray-400">This team develops people. Some of our strongest contributors weren't fully formed when they joined – they grew into reliability, into leadership, into expertise. We look for trajectory, not just current state. Someone who was bad at something a year ago and is good at it now is more interesting than someone who's always been "fine" at everything.</p>
+        </div>
+    </div>
+
+    <div class="mt-12 pt-6 border-t border-dark-border text-center text-gray-500 text-sm">
+        Team Hiring Profile
+    </div>
+</div>
+
+<script>
+    function showTab(tab) {
+        // Hide all panels
+        document.querySelectorAll('.team-panel').forEach(panel => {
+            panel.classList.add('hidden');
+        });
+
+        // Reset all tab styles
+        document.getElementById('tab-dev').classList.remove('bg-blue-500', 'text-white');
+        document.getElementById('tab-dev').classList.add('bg-dark-tertiary', 'text-gray-400');
+        document.getElementById('tab-analytics').classList.remove('bg-blue-500', 'text-white');
+        document.getElementById('tab-analytics').classList.add('bg-dark-tertiary', 'text-gray-400');
+
+        // Show selected panel and style tab
+        document.getElementById('panel-' + tab).classList.remove('hidden');
+        document.getElementById('tab-' + tab).classList.remove('bg-dark-tertiary', 'text-gray-400');
+        document.getElementById('tab-' + tab).classList.add('bg-blue-500', 'text-white');
+    }
+</script>
 </body>
 </html>
